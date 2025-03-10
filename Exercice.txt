@@ -29,20 +29,19 @@ console.log(sortedByWeight);
 const totalWeight = array.reduce((acc, pokemon) => acc + parseFloat(pokemon.weight), 0);
 console.log(totalWeight);
 
-7. .includes()
-➡️ Modifie le filtre pour inclure tous les Pokémon ayant "Electric" dans leurs types.
-const electricPokemons = array.filter(pokemon => pokemon.type.includes("Electric"));
-console.log(electricPokemons);
+7. .every()
+➡️ Vérifier si tous les Pokémon ont plus de 30 Kg
+const allHaveMoreThan30kg = array.every(pokemon => pokemon.weight > 30);
+console.log("Tous les Pokémon ont-ils plus de 30 Kg ? ", allHaveMoreThan30kg);
 
 8. .some()
 ➡️ Vérifier s'il y a un Pokémon de type "Dragon"
-const hasDragonType = pokemons.some(pokemon => pokemon.type === "Dragon");
+const hasDragonType = array.some(pokemon => pokemon.type === "Dragon");
 console.log("🐉 Y a-t-il un Pokémon de type Dragon ? ", hasDragonType);
 
-9. .every()
-➡️ Vérifier si tous les Pokémon ont plus de 30 HP
-const allHaveMoreThan30HP = pokemons.every(pokemon => pokemon.hp > 30);
-console.log("❤️ Tous les Pokémon ont-ils plus de 30 HP ? ", allHaveMoreThan30HP);
+9. .push() 
+➡️ Utilise .push() pour ajouter un nouveau Pokémon à la fin de la liste.
+array.push({ id: 152, name: "Charizard Gigamax", type: "Fire"});
 
 10. .splice()
 ➡️ Ajouter un nouveau Pokémon : "Dracolosse" (Dragon, 91 HP) avec .splice()
@@ -59,7 +58,7 @@ console.log(lastPokemon);
 const firstPokemon = array.shift();
 console.log(firstPokemon);
 
-14. Math.max() + For
+13. Math.max() + For
 ➡️ Trouve le Pokémon le plus lourd en convertissant "weight".
 let maxWeight = -Infinity;
 let heaviestPokemon;
@@ -72,10 +71,8 @@ for (let i = 0; i < array.length; i++) {
 }
 console.log(heaviestPokemon);
 
-15. .forEach()
+14. .forEach()
 ➡️ Affiche une phrase pour chaque Pokémon.
 array.forEach(pokemon => {
   console.log(`Ce Pokémon s'appelle ${pokemon.name}.`);
 });
-
-
