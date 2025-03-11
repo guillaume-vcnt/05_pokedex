@@ -29,7 +29,9 @@ async function loadPokedex() {
   );
   console.log("🐟 Pokémon type water :", waterPokemon);
 
-  //la méthode .filter() fonctionne de manière à exécuter la fonction de rappel (callback) pour chaque élément du tableau, mais elle n'inclut dans le tableau final que les éléments pour lesquels le résultat de la fonction est true. Si la conversion échoue et que la fonction retourne false, l'élément est simplement exclu du tableau filtré.
+  //la méthode .filter() fonctionne de manière à exécuter la fonction de rappel (callback) pour chaque élément du tableau, 
+  //mais elle n'inclut dans le tableau final que les éléments pour lesquels le résultat de la fonction est true. 
+  //Si la conversion échoue et que la fonction retourne false, l'élément est simplement exclu du tableau filtré.
   const weightPokemon = pokedex
     .filter((pokemon) => !isNaN(parseFloat(pokemon.weight)))
     .sort((a, b) => parseFloat(a.weight) - parseFloat(b.weight));
@@ -86,17 +88,6 @@ async function loadPokedex() {
 
   //Si array est garanti d’avoir au moins un élément, alors initialiser avec array[0] est plus efficace.
   //Si array peut être vide, alors la première approche (let heaviestPokemon;) est plus sécurisée.
-  let heaviestPokemon;
-  let maxWeight = -Infinity;
-  for (const pokemon of pokedex) {
-    const weightValue = parseFloat(pokemon.weight);
-    if (weightValue > maxWeight) {
-      maxWeight = weightValue;
-      heaviestPokemon = pokemon.name;
-    }
-  }
-  console.log("Pokemon le plus lourd :", heaviestPokemon);
-
   // let maxWeight = -Infinity;
   // let heaviestPokemon;
   // //   for (let i = 0; i < pokedex.length; i++) {
@@ -108,6 +99,17 @@ async function loadPokedex() {
   // //   }
   // //   console.log("Pokemon le plus lourd :", heaviestPokemon);
   // // }
+
+  let heaviestPokemon;
+  let maxWeight = -Infinity;
+  for (const pokemon of pokedex) {
+    const weightValue = parseFloat(pokemon.weight);
+    if (weightValue > maxWeight) {
+      maxWeight = weightValue;
+      heaviestPokemon = pokemon.name;
+    }
+  }
+  console.log("Pokemon le plus lourd :", heaviestPokemon);
 
   const grassPokemon = pokedex.filter((pokemon) =>
     pokemon.type.includes("Grass")
