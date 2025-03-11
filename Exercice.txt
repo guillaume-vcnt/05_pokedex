@@ -1,78 +1,44 @@
-1. .map()
+1. .length
+➡️ Calcule le nombre total de Pokémon dans le Pokedex.
+
+2. .map()
 ➡️ Crée un nouveau tableau contenant uniquement les noms des Pokémon.
-const names = array.map(pokemon => pokemon.name);
-console.log(names);
 
-2. Math.random()
+3. Math.random()
 ➡️ Sélectionne un Pokémon aléatoire et affiche son nom.
-const randomIndex = Math.floor(Math.random() * array.length);
-const randomPokemon = array[randomIndex];
-console.log("🎲", randomPokemon.name);
 
-3. .filter()
+4. .filter()
 ➡️ Récupère uniquement tous les Pokémon de type "Fire".
-const firePokemons = array.filter(pokemon => pokemon.type === "Fire");
-console.log("🔥 Pokémon de type fire :", firePokemons);
 
-4. .find()
+5. .find()
 ➡️ Récupère un Pokémon de type "Water"
-const waterPokemon = pokemons.find(pokemon => pokemon.type === "Water");
-console.log("🐟 Pokémon de type water :", waterPokemon);
 
-5. .sort()
+6. .sort()
 ➡️ Trie les Pokémon par poids du plus léger au plus lourd.
-const sortedByWeight = array.sort((a, b) => parseFloat(a.weight) - parseFloat(b.weight));
-console.log(sortedByWeight);
 
-6. .reduce()
+7. .reduce()
 ➡️ Calcule le poids total de tous les Pokémon.
-const totalWeight = array.reduce((acc, pokemon) => acc + parseFloat(pokemon.weight), 0);
-console.log(totalWeight);
 
-7. .every()
-➡️ Vérifier si tous les Pokémon ont plus de 30 Kg
-const allHaveMoreThan30kg = array.every(pokemon => pokemon.weight > 30);
-console.log("Tous les Pokémon ont-ils plus de 30 Kg ? ", allHaveMoreThan30kg);
+8. .every()
+➡️ Vérifier si tous les Pokémon font plus de 10 Kg
 
-8. .some()
+9. .some()
 ➡️ Vérifier s'il y a un Pokémon de type "Dragon"
-const hasDragonType = array.some(pokemon => pokemon.type === "Dragon");
-console.log("🐉 Y a-t-il un Pokémon de type Dragon ? ", hasDragonType);
 
-9. .push() 
-➡️ Utilise .push() pour ajouter un nouveau Pokémon à la fin de la liste.
-array.push({ id: 152, name: "Charizard Gigamax", type: "Fire"});
+10. .push() 
+➡️ Ajoute un nouveau Pokémon à la fin de la liste.
 
-10. .splice()
-➡️ Ajouter un nouveau Pokémon : "Dracolosse" (Dragon, 91 HP) avec .splice()
-pokemons.splice(2, 0, { name: "Dracolosse", type: "Dragon", hp: 91 });
-console.log("➕ Liste après ajout de Dracolosse :", pokemons);
+11. .splice()
+➡️ Ajoute un nouveau Pokémon : "Charizard Gigamax"
 
-11. .pop()
-➡️ Supprime le dernier Pokémon de la liste et affiche-le.
-const lastPokemon = array.pop();
-console.log(lastPokemon);
+14. .shift()
+➡️ Retire le premier Pokémon de la liste et affiche-le.
 
-12. .shift()
-➡️ Supprime le premier Pokémon de la liste et affiche-le.
-const firstPokemon = array.shift();
-console.log(firstPokemon);
+15. .pop()
+➡️ Retire le dernier Pokémon de la liste et affiche-le.
 
-13. Math.max() + For
-➡️ Trouve le Pokémon le plus lourd en convertissant "weight".
-let maxWeight = -Infinity;
-let heaviestPokemon;
-for (let i = 0; i < array.length; i++) {
-  let weight = parseFloat(array[i].weight);
-  if (weight > maxWeight) {
-    maxWeight = weight;
-    heaviestPokemon = array[i];
-  }
-}
-console.log(heaviestPokemon);
+14. Boucle For of
+➡️ Trouve le Pokémon le plus lourd.
 
-14. .forEach()
-➡️ Affiche une phrase pour chaque Pokémon.
-array.forEach(pokemon => {
-  console.log(`Ce Pokémon s'appelle ${pokemon.name}.`);
-});
+15. .forEach()
+➡️ Affiche une phrase avec le nom de chaque Pokémon de type "Grass".
