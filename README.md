@@ -6,7 +6,7 @@ Le but de cet exercice individuel est de travailler le parsing de données mais 
 
 ## Caractéristiques
 
-État du projet : En cours
+État du projet : Terminé
 
 Technologies : JavaScript
 
