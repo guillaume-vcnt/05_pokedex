@@ -2,7 +2,7 @@
 
 ## À propos
 
-Cet exercice a pour but de travailler le parsing de données, mais aussi de consolider la maîtrise des boucles et des structures de données imbriquées en affichant pour l’utilisateur quelques statistiques sur les Pokémon, à partir d’une base de données JSON.
+Cet exercice a pour but de travailler le parsing de données et de consolider la maîtrise des structures de données imbriquées à partir d'une base de données JSON sur le thème des Pokémon.
 
 ## Caractéristiques
 
@@ -16,4 +16,4 @@ OS : Windows
 
 ## Utilisation
 
-S'exécute via la console
+S'exécute via un terminal
